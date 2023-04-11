@@ -35,7 +35,11 @@
                 {
                     "name": "Jump",
                     "type": "Button",
+<<<<<<< Updated upstream
                     "id": "f5b8fe96-fa66-4142-821d-ee00a1190842",
+=======
+                    "id": "63aca8e7-c461-4cb1-8761-cbfaafe9634e",
+>>>>>>> Stashed changes
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -265,6 +269,7 @@
                 },
                 {
                     "name": "",
+<<<<<<< Updated upstream
                     "id": "21dcdbc7-5143-4121-8ed6-67c65824b8e7",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -281,6 +286,13 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+=======
+                    "id": "46ff87a5-7d80-486c-8665-d5d62ae1df7e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+>>>>>>> Stashed changes
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
