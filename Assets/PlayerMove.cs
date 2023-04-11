@@ -5,9 +5,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
-
+    public Collider groundCheck;
     public float speed;
     private Vector2 move;
+    public bool isColliding = false;
+    public string checkCollide = "";
+    public float jumpSpeed = 1;
 
     public void onMove(InputAction.CallbackContext context)
     {
@@ -19,6 +22,18 @@ public class PlayerMove : MonoBehaviour
         movePlayer();
     }
 
+    private void OnTriggerEnter(Collider other){        
+        if (other.tag == "Ground"){
+            isColliding = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other){        
+        if (other.tag == "Ground"){
+            isColliding = false;
+        }
+    }
+
     public void movePlayer(){
         Vector3 movement = new Vector3(move.x, 0f,move.y);
 
@@ -27,4 +42,9 @@ public class PlayerMove : MonoBehaviour
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
 
+    public void jumpPlayer(){
+        if (isColliding) {
+            transform.position += Vector3.up * jumpSpeed;
+        }
+    }
 }
